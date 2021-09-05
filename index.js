@@ -19,17 +19,11 @@ app.use(passport.session());
 
 require("./routes/authRoutes")(app);
 
-mongoose
-  .connect(keys.mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("connected");
-  })
-  .catch((e) => {
-    console.log("Something went wrong", e);
-  });
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(keys.mongoURI);
+  console.log("Connect to database :)");
+}
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
