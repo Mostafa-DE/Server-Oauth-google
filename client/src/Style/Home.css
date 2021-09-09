@@ -1,0 +1,14 @@
+.mainHome {
+  text-align: center;
+}
+
+.welcomText {
+  font-size: 3.5rem;
+  font-family: cursive;
+}
+
+.feedbackText {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: cursive;
+}

@@ -29,6 +29,3 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server active on port ${PORT} :) `);
 });
-
-//745193880645-6c9if85fukq17oao6uiiliv4cfj2kkef.apps.googleusercontent.com
-//rE63nHuvQSkXauMQ73UbQSKY SECRET_PRODUCTION

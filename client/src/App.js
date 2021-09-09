@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+import Header from "./Components/Header";
+import HomePage from "./Components/Home";
+import Surveys from "./Components/Surveys";
+import NewSurveys from "./Components/NewSurveys";
+import { connect } from "react-redux";
+import * as actions from "./actions";
 
-function App() {
+const App = ({ fetchUser }) => {
+  useEffect(() => {
+    fetchUser();
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Switch>
+        <Route exact path="/" render={() => <HomePage />} />
+        <Route exact path="/surveys" render={() => <Surveys />} />
+        <Route exact path="/surveys/new" render={() => <NewSurveys />} />
+      </Switch>
     </div>
   );
-}
+};
 
-export default App;
+export default connect(null, actions)(App);

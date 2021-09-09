@@ -1,0 +1,36 @@
+.main {
+  background-color: black;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0 0 0 1rem;
+  font-family: cursive;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerLink {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.containerLink li {
+  margin: 1rem;
+  list-style: none;
+}
+
+.link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+}
